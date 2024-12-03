@@ -20,20 +20,36 @@ Our approach involved first identifying and matching Spotify IDs for tracks in t
 
 # Feature Selection
 For our analysis and model to predict the danceability of songs, we carefully selected features from the dataset that are most relevant and quantifiable. The features were chosen based on their data type (int64 and float64) to ensure compatibility with machine learning algorithms, resulting in a streamlined set of predictors. These selected X-variables represent key song attributes and metadata that can potentially influence a track’s danceability:
+
 artist_count: The number of artists contributing to a track, which can indicate collaborations or diversity in musical style.
+
 released_year, released_month, released_day: The release date components that may reflect evolving musical trends or temporal patterns in danceable music.
+
 in_spotify_playlists: The number of Spotify playlists that include the track, serving as a proxy for its general popularity and exposure.
+
 in_spotify_charts: The track’s presence in Spotify’s charts, highlighting its ranking and audience engagement.
+
 in_apple_playlists: The number of Apple Music playlists featuring the track, capturing its cross-platform reach.
+
 in_apple_charts: The ranking of the track on Apple Music, representing its reception on that platform.
+
 in_deezer_charts: The presence and ranking of the track on Deezer, adding another dimension to its multi-platform performance.
+
 bpm (beats per minute): A measure of tempo that directly affects a track’s rhythmic appeal and suitability for dancing.
+
 valence_%: A percentage score reflecting the positivity or happiness conveyed by the track.
+
 energy_%: A percentage measure of the intensity and activity level in the track, with higher scores indicating faster, louder, or more energetic songs.
+
 acousticness_%: A percentage confidence measure of the track’s acoustic properties, with higher values indicating more acoustic content.
+
 instrumentalness_%: A percentage likelihood that the track contains minimal or no vocals, distinguishing instrumental compositions.
+
 liveness_%: A measure of the likelihood that the track was performed live, capturing the presence of an audience.
+
 speechiness_%: A percentage measure of the amount of spoken word in the track, which can impact its rhythm and lyrical style.
+
+# Outcome variable
 The target Y-variable for our model is danceability, which was originally defined as a continuous float between 0 and 1. For better interpretability and classification purposes, we re-categorized this variable into three distinct classes: Low, Medium, and High danceability. This transformation allows us to analyze not only whether a track is danceable but also the degree to which it is suitable for dancing. This feature engineering step provides a more practical framework for predicting and understanding danceability trends in music.
 By focusing on these features, we aim to build a robust model that captures the essential attributes influencing danceability while maintaining interpretability and practical relevance for music analysts and enthusiasts. 
 
