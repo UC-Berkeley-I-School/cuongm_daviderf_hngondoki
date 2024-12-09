@@ -23,7 +23,7 @@ The findings underscore the importance of accurate data curation in large-scale 
 
 # Using Spotify Web API to Retrieve Audio Features
 
-The absence of audio feature data, such as "danceability," in the "Most Streamed Spotify Songs 2024" dataset presented a significant gap in the analysis of song characteristics and their suitability for dancing. To address this limitation, we leveraged Spotify's Web API, which provides detailed audio features for individual tracks via their unique Spotify IDs. This API offers attributes such as energy, valence, tempo, and instrumentalness, which are pivotal in evaluating the musical and perceptual qualities of a track. These features allow us to make informed predictions about a song's danceability, enabling a more nuanced understanding of what makes a track suitable for dancing.
+The absence of audio feature data, such as "danceability," in the "Most Streamed Spotify Songs 2024" dataset presented a significant gap in the analysis of song characteristics and their suitability for dancing. To address this limitation, we leveraged Spotify's Web API, which provides detailed audio features for individual tracks via their unique Spotify IDs [^4]. This API offers attributes such as energy, valence, tempo, and instrumentalness, which are pivotal in evaluating the musical and perceptual qualities of a track. These features allow us to make informed predictions about a song's danceability, enabling a more nuanced understanding of what makes a track suitable for dancing.
 
 Our approach involved first identifying and matching Spotify IDs for tracks in the dataset. Using the API, we sent requests to retrieve the audio features for each track in batches to optimize the process while adhering to rate limits. We ensured that missing IDs were handled efficiently through iterative searches, using track names and artist combinations to maximize retrieval success. Ultimately, the integration of Spotify Web API data enhanced the dataset's analytical potential, bridging the gap between raw streaming statistics and the perceptual qualities of music. This enriched dataset provides a robust foundation for predicting danceability and analyzing trends across musical genres and platforms.
 
@@ -54,6 +54,7 @@ By focusing on these features, we aim to build a robust model that captures the 
 
 # Footnotes
 
-[^1]: Nidula Elgiriyewithana, “Most Streamed Spotify Songs 2024,” Kaggle, https://www.kaggle.com/datasets/nelgiriyewithana/most-streamed-spotify-songs-2024/data.
-[^2]: Shahd Mohamed, “Spotify Analysis Visualization,” Kaggle, https://www.kaggle.com/code/shahdmohamed1/spotify-analysis-visualization.
-[^3]: Pragyan Tiwari, “Classifying Explicitness of Tracks Using LLAMA3-70B,” Kaggle, https://www.kaggle.com/code/pragyantiwari/classifying-explicity-of-tracks-using-llama3-70b.
+[^1]: Nidula Elgiriyewithana, “Most Streamed Spotify Songs 2024,” Kaggle, https://www.kaggle.com/datasets/nelgiriyewithana/most-streamed-spotify-songs-2024/data. Accessed 9 Dec. 2024.
+[^2]: Shahd Mohamed, “Spotify Analysis Visualization,” Kaggle, https://www.kaggle.com/code/shahdmohamed1/spotify-analysis-visualization. Accessed 9 Dec. 2024.
+[^3]: Pragyan Tiwari, “Classifying Explicitness of Tracks Using LLAMA3-70B,” Kaggle, https://www.kaggle.com/code/pragyantiwari/classifying-explicity-of-tracks-using-llama3-70b. Accessed 9 Dec. 2024.
+[^4]: Spotify for Developers. “Get Track's Audio Features.” Spotify for Developers, https://developer.spotify.com/documentation/web-api/reference/get-audio-features. Accessed 9 Dec. 2024.
